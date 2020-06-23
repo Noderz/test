@@ -6,32 +6,32 @@ var joystick = nipplejs.create({
 });
 
 /*joystick.on('dir:up',()=>{ // when 45 degree angle threshold reached
-	simulateKey(83,'ArrowDown','keyup');
-	simulateKey(65,'ArrowLeft','keyup');
-	simulateKey(68,'ArrowRight','keyup');
+	simulateKey(83,'s','keyup');
+	simulateKey(65,'a','keyup');
+	simulateKey(68,'d','keyup');
 	
-	simulateKey(87,'ArrowUp','keydown');
+	simulateKey(87,'w','keydown');
 });
 joystick.on('dir:down',()=>{ // when 45 degree angle threshold reached
-	simulateKey(87,'ArrowUp','keyup');
-	simulateKey(65,'ArrowLeft','keyup');
-	simulateKey(68,'ArrowRight','keyup');
+	simulateKey(87,'w','keyup');
+	simulateKey(65,'a','keyup');
+	simulateKey(68,'d','keyup');
 	
-	simulateKey(83,'ArrowDown','keydown');
+	simulateKey(83,'s','keydown');
 });
 joystick.on('dir:left',()=>{ // when 45 degree angle threshold reached
-	simulateKey(87,'ArrowUp','keyup');
-	simulateKey(83,'ArrowDown','keyup');
-	simulateKey(68,'ArrowRight','keyup');
+	simulateKey(87,'w','keyup');
+	simulateKey(83,'s','keyup');
+	simulateKey(68,'d','keyup');
 	
-	simulateKey(65,'ArrowLeft','keydown');
+	simulateKey(65,'a','keydown');
 });
 joystick.on('dir:right',()=>{ // when 45 degree angle threshold reached
-	simulateKey(87,'ArrowUp','keyup');
-	simulateKey(83,'ArrowDown','keyup');
-	simulateKey(65,'ArrowLeft','keyup');
+	simulateKey(87,'w','keyup');
+	simulateKey(83,'s','keyup');
+	simulateKey(65,'a','keyup');
 
-	simulateKey(68,'ArrowRight','keydown');
+	simulateKey(68,'d','keydown');
 });*/
 
 joystick.on('move',(e,d)=>{
@@ -41,35 +41,35 @@ joystick.on('move',(e,d)=>{
 	console.log(degree);
 	if(degree>=130 && degree<=160){ // up-left degree 160-130
 		console.log('up-left');
-		simulateKey(83,'ArrowDown','keyup');
-		simulateKey(65,'ArrowLeft','keydown');
-		simulateKey(68,'ArrowRight','keyup');
-		simulateKey(87,'ArrowUp','keydown');
+		simulateKey(83,'s','keyup');
+		simulateKey(65,'a','keydown');
+		simulateKey(68,'d','keyup');
+		simulateKey(87,'w','keydown');
 	}
 	else if(c.y=='up' && c.angle=='up'){ // generic up
 		console.log('up');
-		simulateKey(83,'ArrowDown','keyup');
-		simulateKey(65,'ArrowLeft','keyup');
-		simulateKey(68,'ArrowRight','keyup');
-		simulateKey(87,'ArrowUp','keydown');
+		simulateKey(83,'s','keyup');
+		simulateKey(65,'a','keyup');
+		simulateKey(68,'d','keyup');
+		simulateKey(87,'w','keydown');
 	}else if(c.y=='down' && c.angle=='down'){ // generic down
 		console.log('down');
-		simulateKey(87,'ArrowUp','keyup');
-		simulateKey(65,'ArrowLeft','keyup');
-		simulateKey(68,'ArrowRight','keyup');
-		simulateKey(83,'ArrowDown','keydown');
+		simulateKey(87,'w','keyup');
+		simulateKey(65,'a','keyup');
+		simulateKey(68,'d','keyup');
+		simulateKey(83,'s','keydown');
 	}else if(c.x=='left' && c.angle=='left'){ // generic left
 		console.log('left');
-		simulateKey(87,'ArrowUp','keyup');
-		simulateKey(83,'ArrowDown','keyup');
-		simulateKey(68,'ArrowRight','keyup');
-		simulateKey(65,'ArrowLeft','keydown');
+		simulateKey(87,'w','keyup');
+		simulateKey(83,'s','keyup');
+		simulateKey(68,'d','keyup');
+		simulateKey(65,'a','keydown');
 	}else if(c.x=='right' && c.angle=='right'){ // generic right
 		console.log('right');
-		simulateKey(87,'ArrowUp','keyup');
-		simulateKey(83,'ArrowDown','keyup');
-		simulateKey(65,'ArrowLeft','keyup');
-		simulateKey(68,'ArrowRight','keydown');
+		simulateKey(87,'w','keyup');
+		simulateKey(83,'s','keyup');
+		simulateKey(65,'a','keyup');
+		simulateKey(68,'d','keydown');
 	}else{
 		console.log('not set, fix!');
 		//console.log(d.direction);
@@ -77,10 +77,10 @@ joystick.on('move',(e,d)=>{
 });
 
 joystick.on('end',()=>{ // when 45 degree angle threshold reached
-	simulateKey(87,'ArrowUp','keyup');
-	simulateKey(83,'ArrowDown','keyup');
-	simulateKey(65,'ArrowLeft','keyup');
-	simulateKey(68,'ArrowRight','keyup');
+	simulateKey(87,'w','keyup');
+	simulateKey(83,'s','keyup');
+	simulateKey(65,'a','keyup');
+	simulateKey(68,'d','keyup');
 });
 
 var template={
@@ -136,22 +136,22 @@ var buttons=[
 	{
 		element:document.getElementById('left'),
 		keycode:37,
-		keyname:'left arrow'
+		keyname:'ArrowLeft'
 	},
 	{
 		element:document.getElementById('right'),
 		keycode:39,
-		keyname:'right arrow'
+		keyname:'ArrowRight'
 	},
 	{
 		element:document.getElementById('up'),
 		keycode:38,
-		keyname:'up arrow'
+		keyname:'ArrowUp'
 	},
 	{
 		element:document.getElementById('down'),
 		keycode:40,
-		keyname:'down arrow'
+		keyname:'ArrowDown'
 	},
 	{
 		element:document.getElementById('abutton'),
@@ -161,7 +161,7 @@ var buttons=[
 	{
 		element:document.getElementById('bbutton'),
 		keycode:188,
-		keyname:','
+		keyname:'comma'
 	},
 	{
 		element:document.getElementById('crouch'),
