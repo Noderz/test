@@ -6,32 +6,32 @@ var joystick = nipplejs.create({
 });
 
 /*joystick.on('dir:up',()=>{ // when 45 degree angle threshold reached
-	simulateKey(40,'ArrowDown','keyup');
-	simulateKey(37,'ArrowLeft','keyup');
-	simulateKey(39,'ArrowRight','keyup');
+	simulateKey(83,'ArrowDown','keyup');
+	simulateKey(65,'ArrowLeft','keyup');
+	simulateKey(68,'ArrowRight','keyup');
 	
-	simulateKey(38,'ArrowUp','keydown');
+	simulateKey(87,'ArrowUp','keydown');
 });
 joystick.on('dir:down',()=>{ // when 45 degree angle threshold reached
-	simulateKey(38,'ArrowUp','keyup');
-	simulateKey(37,'ArrowLeft','keyup');
-	simulateKey(39,'ArrowRight','keyup');
+	simulateKey(87,'ArrowUp','keyup');
+	simulateKey(65,'ArrowLeft','keyup');
+	simulateKey(68,'ArrowRight','keyup');
 	
-	simulateKey(40,'ArrowDown','keydown');
+	simulateKey(83,'ArrowDown','keydown');
 });
 joystick.on('dir:left',()=>{ // when 45 degree angle threshold reached
-	simulateKey(38,'ArrowUp','keyup');
-	simulateKey(40,'ArrowDown','keyup');
-	simulateKey(39,'ArrowRight','keyup');
+	simulateKey(87,'ArrowUp','keyup');
+	simulateKey(83,'ArrowDown','keyup');
+	simulateKey(68,'ArrowRight','keyup');
 	
-	simulateKey(37,'ArrowLeft','keydown');
+	simulateKey(65,'ArrowLeft','keydown');
 });
 joystick.on('dir:right',()=>{ // when 45 degree angle threshold reached
-	simulateKey(38,'ArrowUp','keyup');
-	simulateKey(40,'ArrowDown','keyup');
-	simulateKey(37,'ArrowLeft','keyup');
+	simulateKey(87,'ArrowUp','keyup');
+	simulateKey(83,'ArrowDown','keyup');
+	simulateKey(65,'ArrowLeft','keyup');
 
-	simulateKey(39,'ArrowRight','keydown');
+	simulateKey(68,'ArrowRight','keydown');
 });*/
 
 joystick.on('move',(e,d)=>{
@@ -41,35 +41,35 @@ joystick.on('move',(e,d)=>{
 	console.log(degree);
 	if(degree>=130 && degree<=160){ // up-left degree 160-130
 		console.log('up-left');
-		simulateKey(40,'ArrowDown','keyup');
-		simulateKey(37,'ArrowLeft','keydown');
-		simulateKey(39,'ArrowRight','keyup');
-		simulateKey(38,'ArrowUp','keydown');
+		simulateKey(83,'ArrowDown','keyup');
+		simulateKey(65,'ArrowLeft','keydown');
+		simulateKey(68,'ArrowRight','keyup');
+		simulateKey(87,'ArrowUp','keydown');
 	}
 	else if(c.y=='up' && c.angle=='up'){ // generic up
 		console.log('up');
-		simulateKey(40,'ArrowDown','keyup');
-		simulateKey(37,'ArrowLeft','keyup');
-		simulateKey(39,'ArrowRight','keyup');
-		simulateKey(38,'ArrowUp','keydown');
+		simulateKey(83,'ArrowDown','keyup');
+		simulateKey(65,'ArrowLeft','keyup');
+		simulateKey(68,'ArrowRight','keyup');
+		simulateKey(87,'ArrowUp','keydown');
 	}else if(c.y=='down' && c.angle=='down'){ // generic down
 		console.log('down');
-		simulateKey(38,'ArrowUp','keyup');
-		simulateKey(37,'ArrowLeft','keyup');
-		simulateKey(39,'ArrowRight','keyup');
-		simulateKey(40,'ArrowDown','keydown');
+		simulateKey(87,'ArrowUp','keyup');
+		simulateKey(65,'ArrowLeft','keyup');
+		simulateKey(68,'ArrowRight','keyup');
+		simulateKey(83,'ArrowDown','keydown');
 	}else if(c.x=='left' && c.angle=='left'){ // generic left
 		console.log('left');
-		simulateKey(38,'ArrowUp','keyup');
-		simulateKey(40,'ArrowDown','keyup');
-		simulateKey(39,'ArrowRight','keyup');
-		simulateKey(37,'ArrowLeft','keydown');
+		simulateKey(87,'ArrowUp','keyup');
+		simulateKey(83,'ArrowDown','keyup');
+		simulateKey(68,'ArrowRight','keyup');
+		simulateKey(65,'ArrowLeft','keydown');
 	}else if(c.x=='right' && c.angle=='right'){ // generic right
 		console.log('right');
-		simulateKey(38,'ArrowUp','keyup');
-		simulateKey(40,'ArrowDown','keyup');
-		simulateKey(37,'ArrowLeft','keyup');
-		simulateKey(39,'ArrowRight','keydown');
+		simulateKey(87,'ArrowUp','keyup');
+		simulateKey(83,'ArrowDown','keyup');
+		simulateKey(65,'ArrowLeft','keyup');
+		simulateKey(68,'ArrowRight','keydown');
 	}else{
 		console.log('not set, fix!');
 		//console.log(d.direction);
@@ -77,10 +77,10 @@ joystick.on('move',(e,d)=>{
 });
 
 joystick.on('end',()=>{ // when 45 degree angle threshold reached
-	simulateKey(38,'ArrowUp','keyup');
-	simulateKey(40,'ArrowDown','keyup');
-	simulateKey(37,'ArrowLeft','keyup');
-	simulateKey(39,'ArrowRight','keyup');
+	simulateKey(87,'ArrowUp','keyup');
+	simulateKey(83,'ArrowDown','keyup');
+	simulateKey(65,'ArrowLeft','keyup');
+	simulateKey(68,'ArrowRight','keyup');
 });
 
 var template={
@@ -130,43 +130,43 @@ function simulateKey(keycode,keyname,keytype){
 var buttons=[
 	{
 		element:startButton=document.getElementById('start'),
-		keycode:13,
-		keyname:'Enter'
+		keycode:32,
+		keyname:'Space'
 	},
 	{
 		element:document.getElementById('left'),
-		keycode:65,
-		keyname:'a'
+		keycode:37,
+		keyname:'left arrow'
 	},
 	{
 		element:document.getElementById('right'),
-		keycode:68,
-		keyname:'d'
+		keycode:39,
+		keyname:'right arrow'
 	},
 	{
 		element:document.getElementById('up'),
-		keycode:87,
-		keyname:'w'
+		keycode:38,
+		keyname:'up arrow'
 	},
 	{
 		element:document.getElementById('down'),
-		keycode:83,
-		keyname:'s'
+		keycode:40,
+		keyname:'down arrow'
 	},
 	{
 		element:document.getElementById('abutton'),
-		keycode:88,
-		keyname:'x'
+		keycode:76,
+		keyname:'l'
 	},
 	{
 		element:document.getElementById('bbutton'),
-		keycode:67,
-		keyname:'c'
+		keycode:188,
+		keyname:','
 	},
 	{
 		element:document.getElementById('crouch'),
-		keycode:' ',
-		keyname:'Space'
+		keycode:'k',
+		keyname:'k'
 	}
 ];
 
