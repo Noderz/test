@@ -306,10 +306,10 @@ function bru(){
 	}
 }
 var onend=(()=>{ // when 45 degree angle threshold reached
-	simulateKey(83,'ArrowUp','keyup');
-	simulateKey(65,'ArrowDown','keyup');
-	simulateKey(68,'ArrowLeft','keyup');
-	simulateKey(87,'ArrowRight','keyup');
+	simulateKey(83,'w','keyup');
+	simulateKey(65,'s','keyup');
+	simulateKey(68,'a','keyup');
+	simulateKey(87,'d','keyup');
 });
 var moveHandle=((e,d)=>{
 	console.log(d.direction);
