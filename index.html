@@ -318,52 +318,52 @@ var moveHandle=((e,d)=>{
 	console.log(degree);
 	if(degree>=115 && degree<=150){ // up-left
 		console.log('up-left');
-		simulateKey(40,'ArrowDown','keyup');
-		simulateKey(37,'ArrowLeft','keydown');
-		simulateKey(39,'ArrowRight','keyup');
-		simulateKey(38,'ArrowUp','keydown');
+		simulateKey(83,'ArrowDown','keyup');
+		simulateKey(65,'ArrowLeft','keydown');
+		simulateKey(68,'ArrowRight','keyup');
+		simulateKey(87,'ArrowUp','keydown');
 	} else if(degree>=45 && degree<=90){ // up-right
 		console.log('up-right');
-		simulateKey(40,'ArrowDown','keyup');
-		simulateKey(37,'ArrowLeft','keyup');
-		simulateKey(39,'ArrowRight','keydown');
-		simulateKey(38,'ArrowUp','keydown');
+		simulateKey(83,'ArrowDown','keyup');
+		simulateKey(65,'ArrowLeft','keyup');
+		simulateKey(68,'ArrowRight','keydown');
+		simulateKey(87,'ArrowUp','keydown');
 	} else if(degree>=210 && degree<=255){ // down-left
 		console.log('down-left');
-		simulateKey(40,'ArrowDown','keydown');
-		simulateKey(37,'ArrowLeft','keydown');
-		simulateKey(39,'ArrowRight','keyup');
-		simulateKey(38,'ArrowUp','keyup');
+		simulateKey(83,'ArrowDown','keydown');
+		simulateKey(65,'ArrowLeft','keydown');
+		simulateKey(68,'ArrowRight','keyup');
+		simulateKey(87,'ArrowUp','keyup');
 	} else if(degree>=300 && degree<=345){ // down-right
 		console.log('down-right');
-		simulateKey(40,'ArrowDown','keydown');
-		simulateKey(37,'ArrowLeft','keyup');
-		simulateKey(39,'ArrowRight','keydown');
-		simulateKey(38,'ArrowUp','keyup');
+		simulateKey(83,'ArrowDown','keydown');
+		simulateKey(65,'ArrowLeft','keyup');
+		simulateKey(68,'ArrowRight','keydown');
+		simulateKey(87,'ArrowUp','keyup');
 	} else if(c.y=='up' && c.angle=='up'){ // generic up
 		console.log('up');
-		simulateKey(40,'ArrowDown','keyup');
-		simulateKey(37,'ArrowLeft','keyup');
-		simulateKey(39,'ArrowRight','keyup');
-		simulateKey(38,'ArrowUp','keydown');
+		simulateKey(83,'ArrowDown','keyup');
+		simulateKey(65,'ArrowLeft','keyup');
+		simulateKey(68,'ArrowRight','keyup');
+		simulateKey(87,'ArrowUp','keydown');
 	}else if(c.y=='down' && c.angle=='down'){ // generic down
 		console.log('down');
-		simulateKey(38,'ArrowUp','keyup');
-		simulateKey(37,'ArrowLeft','keyup');
-		simulateKey(39,'ArrowRight','keyup');
-		simulateKey(40,'ArrowDown','keydown');
+		simulateKey(83,'ArrowUp','keyup');
+		simulateKey(65,'ArrowLeft','keyup');
+		simulateKey(68,'ArrowRight','keyup');
+		simulateKey(87,'ArrowDown','keydown');
 	}else if(c.x=='left' && c.angle=='left'){ // generic left
 		console.log('left');
-		simulateKey(38,'ArrowUp','keyup');
-		simulateKey(40,'ArrowDown','keyup');
-		simulateKey(39,'ArrowRight','keyup');
-		simulateKey(37,'ArrowLeft','keydown');
+		simulateKey(83,'ArrowUp','keyup');
+		simulateKey(65,'ArrowDown','keyup');
+		simulateKey(68,'ArrowRight','keyup');
+		simulateKey(87,'ArrowLeft','keydown');
 	}else if(c.x=='right' && c.angle=='right'){ // generic right
 		console.log('right');
-		simulateKey(38,'ArrowUp','keyup');
-		simulateKey(40,'ArrowDown','keyup');
-		simulateKey(37,'ArrowLeft','keyup');
-		simulateKey(39,'ArrowRight','keydown');
+		simulateKey(83,'ArrowUp','keyup');
+		simulateKey(65,'ArrowDown','keyup');
+		simulateKey(68,'ArrowLeft','keyup');
+		simulateKey(87,'ArrowRight','keydown');
 	}else{
 		console.log('not set, fix!');
 		//console.log(d.direction);
@@ -461,43 +461,43 @@ function simulateKey(keycode,keyname,keytype){
 var buttons=[
 	{
 		element:startButton=document.getElementById('start'),
-		keycode:13,
-		keyname:'Enter'
+		keycode:32,
+		keyname:'Space'
 	},
 	{
 		element:document.getElementById('left'),
-		keycode:65,
-		keyname:'a'
+		keycode:37,
+		keyname:'left arrow'
 	},
 	{
 		element:document.getElementById('right'),
-		keycode:68,
-		keyname:'d'
+		keycode:39,
+		keyname:'right arrow'
 	},
 	{
 		element:document.getElementById('up'),
-		keycode:87,
-		keyname:'w'
+		keycode:38,
+		keyname:'up arrow'
 	},
 	{
 		element:document.getElementById('down'),
-		keycode:83,
-		keyname:'s'
+		keycode:40,
+		keyname:'down arrow'
 	},
 	{
 		element:document.getElementById('abutton'),
-		keycode:88,
-		keyname:'x'
+		keycode:76,
+		keyname:'l'
 	},
 	{
 		element:document.getElementById('bbutton'),
-		keycode:67,
-		keyname:'c'
+		keycode:188,
+		keyname:','
 	},
 	{
 		element:document.getElementById('crouch'),
-		keycode:' ',
-		keyname:'Space'
+		keycode:'k',
+		keyname:'k'
 	}
 ];
 
