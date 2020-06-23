@@ -161,7 +161,7 @@ var buttons=[
 	{
 		element:document.getElementById('bbutton'),
 		keycode:188,
-		keyname:'comma'
+		keyname:','
 	},
 	{
 		element:document.getElementById('crouch'),
